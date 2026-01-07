@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Report - Smart Port Information System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="logo.png" alt="Smart Port Logo">
+            </div>
+            <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="globalSearchInput" placeholder="Search vessel, berth...">
+            <button type="button" id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="dropdown">
+                <a id="nav-data">FEATURES ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="traffic.html">TRAFFIC ALLOCATION SYSTEM</a></li>
+                    <li><a href="vessel-search.html">VESSEL SEARCHING PORT</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a id="nav-data">DATA & REPORT ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="port-traffic.html">PORT TRAFFIC DATA</a></li>
+                    <li><a href="berth-availability.html">BERTH AVAILABILITY</a></li>
+                    <li><a href="vessel-history.html">VESSEL HISTORY</a></li>
+                    <li><a href="download.html">DOWNLOAD REPORT</a></li>
+                </ul>
+            </li>
+            <li><a href="news.html">NEWS / EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="scrolling-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon
+            season.
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-bullhorn"></i> UPDATE: New digital tariff system active as of January 1, 2026.
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-ship"></i> VESSEL ARRIVAL: MV TITAN scheduled for Berth 5 at 14:00.
+        </marquee>
+    </div>
+
+    <main id="content-area">
+    <div class="about-header">
+        <h2>DOWNLOAD REPORT</h2>
+        <div class="underline"></div>
+    </div>
+    
+    <section id="data-report" class="content-section">
+        <div id="download-section" class="card download-section">
+            <h2>GENERATE SYSTEM REPORT</h2>
+            
+            <div class="download-controls" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; text-align: left;">
+                <div class="filter-group">
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px;">Date Range</label>
+                    <input type="date" id="startDate" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;"> 
+                    <span>to</span> 
+                    <input type="date" id="endDate" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                
+                <div class="filter-group">
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px;">Format</label>
+                    <select id="fileFormat" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">
+                        <option value="pdf">PDF (.pdf)</option>
+                        <option value="excel">Excel (.xlsx)</option>
+                        <option value="csv">CSV (.csv)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="download-progress-container" style="display: none; margin: 20px 0;">
+                <p id="download-status-text" style="font-weight: bold; color: #333;">Generating Report: 0%</p>
+                <div class="priority-bg" style="background: #eee; height: 20px; width: 100%; border-radius: 10px; overflow: hidden;">
+                    <div id="download-bar" class="priority-fill full" style="width: 0%; height: 100%; background: #2ecc71; transition: width 0.3s ease;"></div>
+                </div>
+            </div>
+
+            <button id="btnGenerateReport" class="btn-download" style="width: 100%; padding: 15px; font-weight: bold;">
+                GENERATE & DOWNLOAD
+            </button>
+        </div>
+    </section>
+</main>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="media/logo.png" alt="Logo">
+                    <span>SMART PORT INFORMATION</span>
+                </div>
+                <p class="footer-description">A smart port is a modern and technologically advanced port that leverages
+                    innovative technologies and data-driven solutions to enhance its operational efficiency, safety and
+                    sustainability.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Operations</h4>
+                <ul>
+                    <li><a href="traffic.html">Traffic allocation System</a></li>
+                    <li><a href="port-traffic.html">Port Traffic</a></li>
+                    <li><a href="vessel-search.html">vessel searching port </a></li>
+                    <li><a href="vessel-history.html">Voyage History</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Safety & News</h4>
+                <ul>
+                    <li><a href="news.html">Maritime Alerts</a></li>
+                    <li><a href="about.html">Port Community</a></li>
+                    <li><a href="contact.html">Emergency Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SMART PORT INFORMATION SYSTEM | ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

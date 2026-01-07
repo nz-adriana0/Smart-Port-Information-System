@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News / Events - Smart Port Information System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="logo.png" alt="Smart Port Logo">
+            </div>
+            <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="globalSearchInput" placeholder="Search vessel, berth...">
+            <button type="button" id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="dropdown">
+                <a id="nav-data">FEATURES ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="traffic.html">TRAFFIC ALLOCATION SYSTEM</a></li>
+                    <li><a href="vessel-search.html">VESSEL SEARCHING PORT</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a id="nav-data">DATA & REPORT ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="port-traffic.html">PORT TRAFFIC DATA</a></li>
+                    <li><a href="berth-availability.html">BERTH AVAILABILITY</a></li>
+                    <li><a href="vessel-history.html">VESSEL HISTORY</a></li>
+                    <li><a href="download.html">DOWNLOAD REPORT</a></li>
+                </ul>
+            </li>
+            <li><a href="news.html">NEWS / EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="scrolling-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon
+            season.
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-bullhorn"></i> UPDATE: New digital tariff system active as of January 1, 2026.
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-ship"></i> VESSEL ARRIVAL: MV TITAN scheduled for Berth 5 at 14:00.
+        </marquee>
+    </div>
+
+    <main id="content-area">
+        <div class="about-header">
+            <h2>PORT NEWS & GALLERY</h2>
+            <div class="underline"></div>
+        </div>
+        <section id="news" class="content-section">
+            <div class="card">
+                <h2 class="section-main-title"><i class="fa-solid fa-newspaper"></i> PORT NEWS & ANNOUNCEMENTS</h2>
+
+                <div class="news-item">
+                    <span class="date-badge">JAN 05, 2026</span>
+                    <h3>Phase 2 Port Expansion Project Officially Begins</h3>
+                    <p>The second phase of the Kuala Terengganu port expansion has officially kicked off, including
+                        deepening the north channel.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="date-badge">JAN 01, 2026</span>
+                    <h3>New Digital Tariff System Launched</h3>
+                    <p>The new digital tariff system is now active. All port users are required to register through the
+                        portal.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="date-badge">DEC 20, 2025</span>
+                    <h3>Monsoon Season Safety Protocol Active</h3>
+                    <p>Due to high winds and increased wave heights, Terminal 2 is operating under high-traffic safety
+                        protocols. Vessel captains are advised to coordinate closely with port control.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 30px;">
+                <h2 class="section-main-title"><i class="fa-solid fa-camera"></i> PORT GALLERY</h2>
+
+                <div class="gallery-grid">
+
+                    <div class="grid-item">
+                        <div class="item-header text-purple">
+                            <i class="fa-solid fa-anchor"></i> HARBOR VIEW
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="https://www.marineinsight.com/wp-content/uploads/2022/03/Port-of-Labuan.png.webp"
+                                alt="Harbor">
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="item-header text-purple">
+                            <i class="fa-solid fa-truck-loading"></i> OPERATIONS
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="https://www.marineinsight.com/wp-content/uploads/2023/09/Quay-Cranes.jpg.webp"
+                                alt="Cranes">
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="item-header text-purple">
+                            <i class="fa-solid fa-tower-observation"></i> CONTROL ROOM
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="https://www.roomdimensions.es/resources/e63e6a67511f24eea1cc5ed04.jpg"
+                                alt="Control Center">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="media/logo.png" alt="Logo">
+                    <span>SMART PORT INFORMATION</span>
+                </div>
+                <p class="footer-description">A smart port is a modern and technologically advanced port that leverages
+                    innovative technologies and data-driven solutions to enhance its operational efficiency, safety and
+                    sustainability.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Operations</h4>
+                <ul>
+                    <li><a href="traffic.html">Traffic allocation System</a></li>
+                    <li><a href="port-traffic.html">Port Traffic</a></li>
+                    <li><a href="vessel-search.html">vessel searching port </a></li>
+                    <li><a href="vessel-history.html">Voyage History</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Safety & News</h4>
+                <ul>
+                    <li><a href="news.html">Maritime Alerts</a></li>
+                    <li><a href="about.html">Port Community</a></li>
+                    <li><a href="contact.html">Emergency Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SMART PORT INFORMATION SYSTEM | ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
