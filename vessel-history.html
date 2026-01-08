@@ -13,16 +13,23 @@
 <body>
 
     <header>
-        <div class="header-left">
-            <div class="logo">
-                <img src="logo.png" alt="Smart Port Logo">
-            </div>
-            <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+    <div class="header-left">
+        <div class="logo">
+            <img src="media/logo.png" alt="Smart Port Logo">
         </div>
+        <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+    </div>
+
+    <div class="search-nav-container">
         <div class="search-container">
             <input type="text" id="globalSearchInput" placeholder="Search vessel, berth...">
             <button type="button" id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+
+        <button class="nav-toggle" aria-label="Open Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
     </header>
 
     <nav>
@@ -97,7 +104,7 @@
         <div class="footer-top">
             <div class="footer-col brand-col">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Logo">
+                    <img src="media/logo.png" alt="Logo">
                     <span>SMART PORT INFORMATION</span>
                 </div>
                 <p class="footer-description">A smart port is a modern and technologically advanced port that leverages
@@ -108,19 +115,26 @@
             <div class="footer-col">
                 <h4>Operations</h4>
                 <ul>
-                    <li><a href="traffic.html">Traffic allocation System</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="traffic.html">Traffic Allocation System</a></li>
                     <li><a href="port-traffic.html">Port Traffic</a></li>
-                    <li><a href="vessel-search.html">vessel searching port </a></li>
-                    <li><a href="vessel-history.html">Voyage History</a></li>
+                    <li><a href="vessel-search.html">Vessel Searching Port</a></li>
+                    <li><a href="vessel-history.html">Vessel History</a></li>
+                    <li><a href="berth-availability.html">Berth Availability</a></li>
+                    <li><a href="download.html">Download Report</a></li>
+                    <li><a href="news.html">News/Event</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Safety & News</h4>
+                <h4>External Links</h4>
                 <ul>
-                    <li><a href="news.html">Maritime Alerts</a></li>
-                    <li><a href="about.html">Port Community</a></li>
-                    <li><a href="contact.html">Emergency Contacts</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ministry_of_Transport_(Malaysia)" target="_blank">Ministry of Transport <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/" target="_blank">Marine Department Msia <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/mengenai-kami/bahagian/bahagian-pengurusan-trafik-dan-bantuan-pelayaran/" target="_blank">Global Marine Traffic <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.international-maritime-rescue.org/"_blank>International Maritim Rescue Federation <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -132,6 +146,5 @@
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
