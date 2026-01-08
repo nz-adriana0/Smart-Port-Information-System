@@ -3,29 +3,40 @@
  * Handles active navigation states and page-specific interactions.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Automatic Active Link Highlighting ---
-    // Instead of showSection(), we look at the current URL to highlight the correct nav link.
+    // --- 1. Automatic Active Link Highlighting (CORRECTED) ---
+    // Get the current page filename (e.g., "vessel-history.html")
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    
+    // Select all links in the nav
     const navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(link => {
+        // Get the href of the link (e.g., "vessel-history.html")
         const linkHref = link.getAttribute('href');
 
-        // Check if the link matches the current filename
+        // Check if this link matches the current page
         if (linkHref === currentPath) {
+            
+            // 1. Highlight the specific sub-link (e.g., Vessel History)
             link.classList.add('active');
 
-            // If the active link is inside the Data & Report dropdown, 
-            // also highlight the parent 'DATA & REPORT' tab.
-            const dropdown = link.closest('.dropdown-menu');
-            if (dropdown) {
-                const parentNav = document.getElementById('nav-data');
-                if (parentNav) parentNav.classList.add('active');
+            // 2. Highlight the Parent Dropdown (e.g., Data & Report)
+            // Find the closest parent list item with class 'dropdown'
+            const parentDropdown = link.closest('.dropdown');
+            
+            if (parentDropdown) {
+                // Find the main link inside that dropdown and make it active
+                const parentLink = parentDropdown.querySelector('a'); 
+                if (parentLink) {
+                    parentLink.classList.add('active');
+                }
             }
         }
     });
+
+    // ... Keep the rest of your code (Section 2, 3, 4, etc.) below this ...
 
  // --- 2. Vessel History Search Filter ---
 const historyVesselInput = document.getElementById('historyVesselInput');
@@ -58,7 +69,16 @@ if (historyVesselInput) {
         });
     }
 
-   
+    // --- 4. Global Search Logic ---
+    // Remains active across all pages with the header search bar
+    const globalSearchBtn = document.querySelector('.search-container button');
+    if (globalSearchBtn) {
+        globalSearchBtn.addEventListener('click', () => {
+            const searchInput = document.querySelector('.search-container input');
+            const query = searchInput ? searchInput.value : "";
+            if (query) alert('Searching system for: ' + query);
+        });
+    }
 });
 
 let currentSlide = 0;
@@ -131,7 +151,26 @@ function updateStats() {
     if (document.querySelector("stat-berthed")) document.querySelector("stat-berthed").innerText = berthed;
 }
 
+// 4. Fungsi Carian (Global Search)
+function setupSearch() {
+    const searchInput = document.querySelector(".search-container input");
+    const searchBtn = document.querySelector(".search-container button");
 
+    const filterData = () => {
+        const query = searchInput.value.toLowerCase();
+        const filtered = vessels.filter(v =>
+            v.name.toLowerCase().includes(query) ||
+            v.status.toLowerCase().includes(query) ||
+            v.berth.toLowerCase().includes(query)
+        );
+        renderTable(filtered);
+    };
+
+    if (searchInput) {
+        searchInput.addEventListener("keyup", filterData);
+        searchBtn.addEventListener("click", filterData);
+    }
+}
 
 // 5. Dropdown Menu Logic (Untuk Mobile/Click)
 function setupDropdowns() {
@@ -352,3 +391,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const newsData = {
+    1: {
+        title: "Phase 2 Port Expansion Project Officially Begins",
+        date: "JAN 05, 2026",
+        content: "The second phase of the Kuala Terengganu port expansion has officially begun. This phase includes deepening the north channel, upgrading berthing facilities, and improving cargo handling efficiency."
+    },
+    2: {
+        title: "New Digital Tariff System Launched",
+        date: "JAN 01, 2026",
+        content: "The Smart Port Digital Tariff System is now active. All port users are required to register via the system to manage billing, invoices, and digital payments."
+    },
+    3: {
+        title: "Monsoon Season Safety Protocol Active",
+        date: "DEC 20, 2025",
+        content: "Due to strong monsoon winds and high waves, Terminal 2 is operating under enhanced safety protocols. Vessel operators must maintain close coordination with port authorities."
+    }
+};
+
+function openNews(id) {
+    document.getElementById("detailTitle").textContent = newsData[id].title;
+    document.getElementById("detailDate").textContent = newsData[id].date;
+    document.getElementById("detailContent").textContent = newsData[id].content;
+
+    document.querySelector(".card").style.display = "none"; // hide list
+    document.getElementById("newsDetail").style.display = "block";
+}
+
+function closeNews() {
+    document.querySelector(".card").style.display = "block"; // show list
+    document.getElementById("newsDetail").style.display = "none";
+}
+
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show'); // toggle nav open/close
+    });
+
+    
