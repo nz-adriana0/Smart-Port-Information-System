@@ -4,159 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Smart Port Information System</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="header-left">
-            <div class="logo">
-                <img src="logo.png" alt="Smart Port Logo">
-            </div>
-            <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+<header>
+    <div class="header-left">
+        <div class="logo">
+            <img src="media/logo.png" alt="Smart Port Logo">
         </div>
+        <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+    </div>
+
+    <div class="search-nav-container">
         <div class="search-container">
             <input type="text" id="globalSearchInput" placeholder="Search vessel, berth...">
             <button type="button" id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+
+        <button class="nav-toggle" aria-label="Open Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html" class="active">ABOUT</a></li>
-            <li class="dropdown">
-                <a id="nav-data">FEATURES ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="traffic.html">TRAFFIC ALLOCATION SYSTEM</a></li>
-                    <li><a href="vessel-search.html">VESSEL SEARCHING PORT</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="nav-data">DATA & REPORT ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="port-traffic.html">PORT TRAFFIC DATA</a></li>
-                    <li><a href="berth-availability.html">BERTH AVAILABILITY</a></li>
-                    <li><a href="vessel-history.html">VESSEL HISTORY</a></li>
-                    <li><a href="download.html">DOWNLOAD REPORT</a></li>
-                </ul>
-            </li>
-            <li><a href="news.html">NEWS / EVENTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
 
-    <div class="scrolling-ticker">
-        <marquee behavior="scroll" direction="left" scrollamount="6">
-            <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon season. 
-            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
-            <i class="fa-solid fa-bullhorn"></i> UPDATE: New digital tariff system active as of January 1, 2026. 
-            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
-            <i class="fa-solid fa-ship"></i> VESSEL ARRIVAL: MV TITAN scheduled for Berth 5 at 14:00.
-        </marquee>
+        <li class="dropdown">
+            <a>FEATURES ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="traffic.html">TRAFFIC ALLOCATION SYSTEM</a></li>
+                <li><a href="vessel-search.html">VESSEL SEARCHING PORT</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a>DATA & REPORT ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="port-traffic.html">PORT TRAFFIC DATA</a></li>
+                <li><a href="berth-availability.html">BERTH AVAILABILITY</a></li>
+                <li><a href="vessel-history.html">VESSEL HISTORY</a></li>
+                <li><a href="download.html">DOWNLOAD REPORT</a></li>
+            </ul>
+        </li>
+
+        <li><a href="news.html">NEWS / EVENTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="scrolling-ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon season.
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="fa-solid fa-bullhorn"></i> UPDATE: New digital tariff system active as of January 1, 2026.
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="fa-solid fa-ship"></i> VESSEL ARRIVAL: MV TITAN scheduled for Berth 5 at 14:00.
+    </marquee>
+</div>
+
+<main id="content-area">
+
+<section class="about-container">
+
+    <div class="about-header">
+        <h2>ABOUT</h2>
+        <div class="underline"></div>
     </div>
 
-    <main id="content-area">
-        
-        <section class="about-container">
-            <div class="about-header">
-                <h2>ABOUT</h2>
-                <div class="underline"></div>
-            </div>
+    <div class="about-grid">
 
-            <div class="about-grid">
-                
-                <div class="about-left-column">
-                    
-                    <div class="info-card">
-                        <h3><i class="fa-solid fa-eye"></i> Vision & Mission</h3>
-                        <div class="card-body">
-                            <p><strong>Vision:</strong> To be the world's most intelligent and sustainable maritime hub, driving global commerce through innovation.</p>
-                            <p><strong>Mission:</strong> To provide seamless port information systems that optimize logistics, ensure safety, and foster economic growth.</p>
-                        </div>
-                    </div>
+        <!-- LEFT COLUMN -->
+        <div class="about-left-column">
 
-                    <div class="info-card">
-                        <h3><i class="fa-solid fa-bullseye"></i> Objectives</h3>
-                        <div class="card-body">
-                            <ul class="obj-list">
-                                <li>Modernize port infrastructure through AI integration.</li>
-                                <li>Achieve 99.9% operational transparency for global carriers.</li>
-                                <li>Reduce vessel turnaround time by 15% annually.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div> <div class="about-right-column">
-                    <div class="info-card full-height">
-                        <h3><i class="fa-solid fa-circle-info"></i> System Overview</h3>
-                        <div class="card-body">
-                             <p>The Smart Port Information System (SPIS) is a centralized platform designed to manage the complexities of modern port operations. By utilizing real-time IoT data and advanced predictive analytics, SPIS provides a comprehensive view of vessel traffic, berth allocation, and resource utilization.</p>
-                            <p>From automated scheduling to predictive maintenance alerts, the system serves as the digital backbone for the harbor master and terminal operators.</p>
-                            <br>
-                            <p><strong>Key Highlights:</strong></p>
-                            <p>It integrates all key data from internal port statistics to the public-facing vessel tracking tool, providing a single source of truth for all stakeholders.</p>
-                        </div>
-                    </div>
-                </div> </div> <div class="org-chart-section">
-                <h3>Organisation Chart</h3>
-                 <div class="chart-container">
-                    
-                    <div class="node director">Port Director</div>
-                    <div class="connector-v"></div> <div class="chart-row">
-                        
-                        <div class="sub-node-group">
-                            <div class="node manager">Harbor Master</div>
-                            <div class="connector-s"></div>
-                            <div class="node leaf">Traffic Control</div>
-                        </div>
-
-                        <div class="sub-node-group">
-                            <div class="node manager">Operations Manager</div>
-                            <div class="connector-s"></div>
-                            <div class="node leaf">Terminal Ops</div>
-                        </div>
-
-                        <div class="sub-node-group">
-                            <div class="node manager">IT Director</div>
-                            <div class="connector-s"></div>
-                            <div class="node leaf">SPIS Maintenance</div>
-                        </div>
-
-                    </div>
+            <div class="info-card">
+                <h3><i class="fa-solid fa-eye"></i> Vision & Mission</h3>
+                <div class="card-body">
+                    <p><strong>Vision:</strong> To be the world's most intelligent and sustainable maritime hub.</p>
+                    <p><strong>Mission:</strong> To deliver a seamless, data-driven port management platform.</p>
                 </div>
             </div>
 
-        </section>
-    </main>
+            <div class="info-card">
+                <h3><i class="fa-solid fa-bullseye"></i> Objectives</h3>
+                <div class="card-body">
+                    <ul class="obj-list">
+                        <li>Modernize port operations using smart technology.</li>
+                        <li>Enhance vessel traffic visibility and safety.</li>
+                        <li>Reduce turnaround time and congestion.</li>
+                    </ul>
+                </div>
+            </div>
 
-    <footer class="main-footer">
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="about-right-column">
+            <div class="info-card full-height">
+                <h3><i class="fa-solid fa-circle-info"></i> System Overview</h3>
+
+                <div class="card-body">
+                    <p>
+                        The Smart Port Information System (SPIS) is a centralized digital platform designed to
+                        manage modern port operations efficiently. It integrates vessel traffic data, berth
+                        availability, and operational analytics into a single interface.
+                    </p>
+
+                    <p>
+                        The system supports real-time monitoring, decision-making, and coordination among
+                        port authorities, terminal operators, and stakeholders.
+                    </p>
+
+                    <!-- ✅ YOUTUBE VIDEO EMBED -->
+                <div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/GEMMdJAamR4"
+        title="Smart Port System Overview"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+                    <p>
+                        <strong>Key Highlight:</strong> SPIS provides a unified source of accurate and up-to-date
+                        port information to improve transparency and operational efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ORGANISATION CHART -->
+    <div class="org-chart-section">
+        <h3>Organisation Chart</h3>
+
+        <div class="chart-container">
+            <img src="media/OrganisationChart.jpeg" alt="OrganisationChart">
+        </div>
+    </div>
+
+</section>
+</main>
+
+<footer class="main-footer">
         <div class="footer-top">
             <div class="footer-col brand-col">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Logo"> 
-                    <span>SMART PORT</span>
+                    <img src="media/logo.png" alt="Logo">
+                    <span>SMART PORT INFORMATION</span>
                 </div>
-                <p>A smart port is a modern and technologically advanced port that leverages innovative technologies.</p>
+                <p class="footer-description">A smart port is a modern and technologically advanced port that leverages
+                    innovative technologies and data-driven solutions to enhance its operational efficiency, safety and
+                    sustainability.</p>
             </div>
 
             <div class="footer-col">
                 <h4>Operations</h4>
                 <ul>
-                    <li><a href="traffic.html">Traffic Allocation</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="traffic.html">Traffic Allocation System</a></li>
                     <li><a href="port-traffic.html">Port Traffic</a></li>
-                    <li><a href="vessel-search.html">Vessel Search</a></li>
+                    <li><a href="vessel-search.html">Vessel Searching Port</a></li>
+                    <li><a href="vessel-history.html">Vessel History</a></li>
+                    <li><a href="berth-availability.html">Berth Availability</a></li>
+                    <li><a href="download.html">Download Report</a></li>
+                    <li><a href="news.html">News/Event</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Safety & News</h4>
+                <h4>External Links</h4>
                 <ul>
-                    <li><a href="news.html">Maritime Alerts</a></li>
-                    <li><a href="about.html">Port Community</a></li>
-                    <li><a href="contact.html">Emergency Contacts</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ministry_of_Transport_(Malaysia)" target="_blank">Ministry of Transport <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/" target="_blank">Marine Department Msia <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/mengenai-kami/bahagian/bahagian-pengurusan-trafik-dan-bantuan-pelayaran/" target="_blank">Global Marine Traffic <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.international-maritime-rescue.org/"_blank>International Maritim Rescue Federation <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -165,7 +198,5 @@
             <p>© 2025 SMART PORT INFORMATION SYSTEM | ALL RIGHTS RESERVED</p>
         </div>
     </footer>
-
 </body>
-
 </html>
