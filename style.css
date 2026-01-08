@@ -76,26 +76,26 @@ header {
 
 /* Search in Header */
 .search-container {
+    flex: 1; /* Mengambil ruang yang ada */
     display: flex;
 }
 
 .search-container input {
-    padding: 10px 15px;
-    border: none;
+    flex: 1;
+    padding: 8px 12px;
     border-radius: 4px 0 0 4px;
-    width: 200px;
+    border: none;
+    width: 200px; /* Tetapkan lebar asas supaya konsisten */
     outline: none;
 }
 
 .search-container button {
-    padding: 10px 15px;
-    background: var(--highlight-gold);
-    border: none;
-    color: var(--primary-navy);
-    cursor: pointer;
+    padding: 8px 12px;
     border-radius: 0 4px 4px 0;
-    font-weight: bold;
-    transition: background 0.3s;
+    border: none;
+    background: #ffc845; /* Warna Kuning/Gold */
+    color: #1b1b3a;
+    cursor: pointer;
 }
 
 .search-container button:hover {
@@ -354,6 +354,8 @@ tr:hover {
 }
 
 /* --- Port Traffic Chart Styles --- */
+/* --- ORGANISATION CHART IMAGE CONTAINER --- */
+
 .chart-container {
     background: #f9f9f9;
     padding: 20px;
@@ -363,6 +365,29 @@ tr:hover {
     align-items: flex-end;
     justify-content: center;
     border: 1px solid #eee;
+}
+
+/* Style untuk Gambar */
+.chart-container img {
+    /* Ini pastikan gambar sentiasa memenuhi lebar kotak tetapi tidak lebih */
+    width: 100%; 
+    max-width: 100%; 
+    
+    /* Ini pastikan gambar mengekalkan ratio asal (tidak gepeng/penyek) */
+    height: auto; 
+    
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Tambah bayang sikit supaya nampak 'pop' */
+}
+
+/* ===============================
+   MOBILE RESPONSIVE (Skrin Kecil)
+   =============================== */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 10px; /* Kurangkan padding tepi di mobile supaya gambar lebih besar */
+    }
 }
 
 .bar-chart {
@@ -736,6 +761,23 @@ footer {
     margin-right: 10px;
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 15px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
 /* Organisation Chart Styles */
 .org-chart-section {
     margin-top: 60px;
@@ -1105,3 +1147,245 @@ tr:hover { background: #f8fafc; }
     margin-bottom: 5px;
     color: #333;
 }
+
+.news-item {
+    cursor: pointer;
+}
+
+.news-item:hover {
+    background-color: #f3f6ff;
+}
+
+/* --- Back Button Styling --- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+    padding: 12px 25px;
+    background-color: var(--primary-navy); /* Warna latar Navy */
+    color: var(--white); /* Warna teks Putih */
+    border: none;
+    border-radius: 50px; /* Bentuk 'pill' (bujur) */
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efek Hover (Bila mouse lalu) */
+.btn-back:hover {
+    background-color: var(--highlight-gold); /* Tukar jadi Gold */
+    color: var(--primary-navy); /* Teks jadi Navy */
+    transform: translateX(-5px); /* Bergerak sikit ke kiri */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Style ikon panah di dalam butang */
+.btn-back i {
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+/* Panah bergerak bila hover */
+.btn-back:hover i {
+    transform: translateX(-3px);
+}
+
+/* ===============================
+   MOBILE-FRIENDLY FIXES (MAX WIDTH 768PX)
+   =============================== */
+@media (max-width: 768px) {
+
+    /* 1. Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav li a {
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* 2. Tables */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    /* 3. Content grid */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-column {
+        gap: 20px;
+    }
+
+    /* 4. Font adjustments */
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .carousel-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-text p {
+        font-size: 1rem;
+    }
+
+    /* 5. Carousel height */
+    .carousel-container {
+        height: 250px;
+        border-radius: 12px;
+    }
+
+    /* 6. Footer stacking */
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    /* 7. Organisation chart adjustments */
+    .chart-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .sub-node-group {
+        width: 100%;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .connector-s,
+    .connector-h {
+        display: none;
+    }
+
+    .sub-node-group::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 20px;
+        background-color: #cbd5e1;
+    }
+
+    .node {
+        width: 80%;
+        margin: 0 auto 10px auto;
+        font-size: 0.9rem;
+    }
+
+    .chart-container > .node.director::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: #cbd5e1;
+        margin: 0 auto;
+        position: relative;
+        top: 15px;
+    }
+
+    /* 8. Gallery adjustments */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-image-wrapper {
+        height: 250px;
+    }
+
+}
+
+/* Container for search + nav toggle */
+.search-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between search and hamburger */
+}
+
+/* Keep search flexible */
+.search-container {
+    flex: 1; /* takes remaining space */
+    display: flex;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    background: #ffc845;
+    color: #1b1b3a;
+    cursor: pointer;
+}
+
+/* Hamburger toggle button */
+.nav-toggle {
+    display: none;
+    background: #ffc845;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #1b1b3a;
+}
+
+/* Mobile nav adjustments */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
