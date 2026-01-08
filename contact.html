@@ -7,23 +7,28 @@
     <title>Contact - Smart Port Information System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
 </head>
 
 <body>
 
     <header>
-        <div class="header-left">
-            <div class="logo">
-                <img src="logo.png" alt="Smart Port Logo">
-            </div>
-            <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+    <div class="header-left">
+        <div class="logo">
+            <img src="media/logo.png" alt="Smart Port Logo">
         </div>
+        <h1><a href="index.html" id="system-title">SMART PORT INFORMATION SYSTEM</a></h1>
+    </div>
+
+    <div class="search-nav-container">
         <div class="search-container">
             <input type="text" id="globalSearchInput" placeholder="Search vessel, berth...">
             <button type="button" id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
+        <button class="nav-toggle" aria-label="Open Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
     </header>
 
     <nav>
@@ -47,17 +52,16 @@
                 </ul>
             </li>
             <li><a href="news.html">NEWS / EVENTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
         </ul>
     </nav>
 
     <div class="scrolling-ticker">
         <marquee behavior="scroll" direction="left" scrollamount="6">
-            <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon
-            season.
-            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-triangle-exclamation"></i> ALERT: High traffic expected at Terminal 2 due to monsoon season.
+            &nbsp;&nbsp;|&nbsp;&nbsp;
             <i class="fa-solid fa-bullhorn"></i> UPDATE: New digital tariff system active as of January 1, 2026.
-            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;|&nbsp;&nbsp;
             <i class="fa-solid fa-ship"></i> VESSEL ARRIVAL: MV TITAN scheduled for Berth 5 at 14:00.
         </marquee>
     </div>
@@ -70,43 +74,88 @@
 
         <section id="contact" class="content-section">
             <div class="contact-container">
+                
                 <div class="contact-info">
-                    <div class="map-container"
-                        style="height:250px; border-radius:4px; margin-bottom:20px; overflow:hidden;">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31750.0435160533!2d103.118680!3d5.3331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be04a3f8f179%3A0x6737522501d51a66!2sKuala%20Terengganu%2C%20Terengganu!5e0!3m2!1sen!2smy!4v1700000000000"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <h3>OFFICE INFO</h3>
-                    <p><strong> HQ Address:</strong><br>
-                        Lembaga Pelabuhan,<br>
-                        21030 Kuala Terengganu,<br>
-                        Terengganu, Malaysia.</p>
-                    <p><strong>Fax:</strong> +609-668-1234</p>
-                    <p><strong>Tel:</strong> +609-668-5678</p>
-                    <p><strong>Email:</strong> support@smartport.sys</p>
-                </div>
+    <div class="map-container"
+        style="height:250px; border-radius:4px; margin-bottom:20px; overflow:hidden;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31750.0435160533!2d103.118680!3d5.3331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be04a3f8f179%3A0x6737522501d51a66!2sKuala%20Terengganu%2C%20Terengganu!5e0!3m2!1sen!2smy!4v1700000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+    <h3>OFFICE INFO</h3>
+    <p><strong> HQ Address:</strong><br>
+        Lembaga Pelabuhan,<br>
+        21030 Kuala Terengganu,<br>
+        Terengganu, Malaysia.</p>
+    <p><strong>Fax:</strong> +609-668-1234</p>
+    <p><strong>Tel:</strong> +609-668-3237</p>
+    
+    <p><strong>Email:</strong> 
+        <a href="mailto:rozniza@umt.edu.my" style="color: #FFC857; text-decoration: underline;">
+            rozniza@umt.edu.my
+        </a>
+    </p>
+</div>
+
                 <div class="contact-form">
                     <h3>SEND INQUIRY</h3>
                     <form id="portContactForm">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="btn-download">SEND MESSAGE</button>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85rem; font-weight: bold; color: #333;">Full Name:</label>
+                            <input type="text" placeholder="Enter your full name" required style="width: 100%; padding: 10px; margin-top: 5px;">
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85rem; font-weight: bold; color: #333;">Email Address:</label>
+                            <input type="email" placeholder="example@email.com" required style="width: 100%; padding: 10px; margin-top: 5px;">
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85rem; font-weight: bold; color: #333; display: block; margin-bottom: 5px;">I am a:</label>
+                            
+                            <input type="radio" id="public" name="user_type" value="public" checked>
+                            <label for="public" style="margin-right: 15px; font-size: 0.9rem;">Public Visitor</label>
+                            
+                            <input type="radio" id="logistics" name="user_type" value="logistics">
+                            <label for="logistics" style="font-size: 0.9rem;">Logistics Partner</label>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85rem; font-weight: bold; color: #333;">Subject:</label>
+                            <select style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="complaint">Report an Issue</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-size: 0.85rem; font-weight: bold; color: #333;">Message:</label>
+                            <textarea placeholder="Type your message here..." rows="5" required style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter" style="font-size: 0.9rem;">Subscribe to Port News & Alerts</label>
+                        </div>
+
+                        <button type="submit" class="btn-download" style="width: 100%;">SEND MESSAGE</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="main-footer">
         <div class="footer-top">
             <div class="footer-col brand-col">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Logo">
+                    <img src="media/logo.png" alt="Logo">
                     <span>SMART PORT INFORMATION</span>
                 </div>
                 <p class="footer-description">A smart port is a modern and technologically advanced port that leverages
@@ -117,19 +166,26 @@
             <div class="footer-col">
                 <h4>Operations</h4>
                 <ul>
-                    <li><a href="traffic.html">Traffic allocation System</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="traffic.html">Traffic Allocation System</a></li>
                     <li><a href="port-traffic.html">Port Traffic</a></li>
-                    <li><a href="vessel-search.html">vessel searching port </a></li>
-                    <li><a href="vessel-history.html">Voyage History</a></li>
+                    <li><a href="vessel-search.html">Vessel Searching Port</a></li>
+                    <li><a href="vessel-history.html">Vessel History</a></li>
+                    <li><a href="berth-availability.html">Berth Availability</a></li>
+                    <li><a href="download.html">Download Report</a></li>
+                    <li><a href="news.html">News/Event</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Safety & News</h4>
+                <h4>External Links</h4>
                 <ul>
-                    <li><a href="news.html">Maritime Alerts</a></li>
-                    <li><a href="about.html">Port Community</a></li>
-                    <li><a href="contact.html">Emergency Contacts</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ministry_of_Transport_(Malaysia)" target="_blank">Ministry of Transport <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/" target="_blank">Marine Department Msia <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.marine.gov.my/en/mengenai-kami/bahagian/bahagian-pengurusan-trafik-dan-bantuan-pelayaran/" target="_blank">Global Marine Traffic <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="https://www.international-maritime-rescue.org/"_blank>International Maritim Rescue Federation <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -141,6 +197,5 @@
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
